@@ -1,0 +1,31 @@
+start the project by running 
+npm install --save
+
+npm app.js
+
+The following application has
+
+app.js
+controller
+    which has the API req, res 
+biz 
+    which has the business logic for all the 3 APIs
+    1. Login 
+    2. Registration
+    3. Get all users (sort / pagination / filter)
+repository
+    which has MYSQL queries 
+
+DB used is Relational DB - MYSQL 
+
+APIs 
+http://localhost:3000/registration - POST
+    Checks if employee present if no then creates new registration
+http://localhost:3000/login - POST
+    Returns success if employee is registered
+http://localhost:3000/modifySearch?first_name=Mitchelle&last_name=Creado&employee_id=12&pagination=1&offset=1&sort=[first_name, last_name, employee_id] - GET
+    first_name - filter by first_name if present
+    last_name - filter by last_name if present
+    employee_id - filter by employee_id if present
+    pagination & offset - used for pagination 
+    sort - sorting parameters
